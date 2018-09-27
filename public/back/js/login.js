@@ -77,3 +77,11 @@ $("#form").on('success.form.bv', function (e) {
 $('button[type="reset"]').on('click',function(){
   $("#form").data('bootstrapValidator').resetForm();
 })
+
+//进度条功能
+$(document).ajaxStart(function(){
+  NProgress.start();
+})
+$(document).ajaxStop(function(){
+  NProgress.done();
+})
