@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*去除a标签默认样式*/
+a:link,a:hover,a:active,a:visited {
+  text-decoration: none;
+}
+/*去除ul的默认样式*/
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+/*侧边栏标题区域*/
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: #222D32;
+  transition: all 1s;
+}
+.lt_aside.hidden_meau {
+  left: -180px;
+}
+.lt_aside .title {
+  height: 50px;
+  width: 180px;
+}
+.lt_aside .title a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  background-color: #367FA9;
+}
+
+/*用户头像*/
+.lt_aside .user {
+  margin-top: 30px;
+}
+.lt_aside .user img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.lt_aside .user p {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+/*侧边栏导航*/
+.lt_aside .aside_nav {
+  margin-top: 30px;
+}
+.lt_aside .aside_nav li {
+  width: 100%;
+}
+.lt_aside .aside_nav li a {
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  padding-left: 40px;
+  color: #fff;
+  border-left: 3px solid transparent;
+}
+.lt_aside .aside_nav li a.active {
+  border-left: 3px solid #367FA9;
+  background-color: #1D1F21;
+}
+.lt_aside .aside_nav li .hidden_nav a {
+  padding-left: 60px;
+}
+
+/*顶部区域*/
+.lt_main .topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #367FA9;
+  position: fixed;
+  top: 0;
+  padding-left: 180px;
+  transition: all 1s;
+}
+.lt_main .topbar.hidden_meau {
+  padding-left: 0;
+}
+.lt_main .topbar a {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  height: 50px;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+/*右侧下部*/
+.lt_main .botbar {
+  padding-left: 180px;
+  padding-top: 50px;
+  height: 1000px;
+  transition: all 1s;
+}
+.lt_main .botbar.hidden_meau {
+  padding-left: 0;
+}
+.modal-body {
+  color: #A94442;
+}
+.lt_main .breadcrumb {
+  margin-top: 20px;
+}

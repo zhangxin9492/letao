@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.lt_main .botbar .botbar_l {
+  width: 46%;
+  height: 400px;
+}
+.lt_main .botbar .botbar_r {
+  width: 46%;
+  height: 400px;
+  background-color: red;
+}
