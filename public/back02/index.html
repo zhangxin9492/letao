@@ -1,47 +1,90 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Title</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
-  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <div class="container">
-    <div class="col-lg-4 col-lg-offset-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">后台管理系统</h3>
+  <div class="lt_aside">
+    <div class="title">
+      <h3>黑马26期</h3>
+    </div>
+    <div class="user">
+      <img src="../upload/product/837a4901-a074-11e8-ae45-ab028ffbb8aa.jpg" alt="">
+      <p>超级管理员</p>
+    </div>
+    <ul class="nav_mangment">
+      <li>
+        <a href="user.html">
+          <i class="glyphicon glyphicon-user"></i>
+          <span>用户管理</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class="category">
+          <i class="glyphicon glyphicon-list"></i>
+          <span>分类管理</span>
+        </a>
+        <div class="second_nav" style="display: none;">
+          <a href="first.html" class="first">一级分类</a>
+          <a href="second.html" class="second">二级分类</a>
         </div>
-        <div class="panel-body">
-          <form class="form-horizontal" id="form">
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
-              <div class="col-sm-9">
-                <input type="text" name="username" class="form-control" id="inputEmail3" placeholder="请输入用户名">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword3" class="col-sm-3 control-label">密　码</label>
-              <div class="col-sm-9">
-                <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-3 col-sm-6">
-                <button type="reset" class="btn btn-default pull-left">重置</button>
-                <button type="submit" class="btn btn-default btn-primary pull-right">登录</button>
-              </div>
-            </div>
-          </form>
+      </li>
+      <li>
+        <a href="good_mangment.html">
+          <i class="glyphicon glyphicon-tags"></i>
+          <span>商品管理</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="topbar">
+    <a href="#" class="pull-left">
+      <i class="glyphicon glyphicon-align-justify"></i>
+    </a>
+    <a href="#" class="pull-right">
+      <i class="glyphicon glyphicon-log-out"></i>
+    </a>
+  </div>
+  <div class="lt_main">
+    <div class="container-fluid">
+      <ol class="breadcrumb">
+        <li><a href="#">管理系统</a></li>
+        <li class="active">首页</li>
+      </ol>
+      <div class="main_left pull-left"></div>
+      <div class="main_right pull-right"></div>
+    </div>
+  </div>
+  <!-- 模态框 -->
+  <div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <i class="glyphicon glyphicon-info-sign"></i>
+          <span>您确定要退出登陆吗</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-success btns-confirm">退出</button>
         </div>
       </div>
     </div>
   </div>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-  <script src="./js/login.js"></script>
+  <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./lib/echarts/echarts.common.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./checklogin.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

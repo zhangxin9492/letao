@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.main_left,.main_right {
+  width: 46%;
+  height: 400px;
+  background-color: pink;
+}
