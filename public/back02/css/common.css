@@ -83,7 +83,7 @@ html,body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: pink;
+  background-color: #367FA9;
   transition: all 1s;
 }
 .topbar.hidden_nav {
