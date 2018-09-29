@@ -6,6 +6,7 @@ $(function(){
   var pageSize = 5;
   var id = 0;
   var isDelete = 0;
+  //表格页面渲染
   function render(){
     $.ajax({
       url:'/user/queryUser',
@@ -31,6 +32,7 @@ $(function(){
   }
   render();
 
+  //修改用户状态
   $('tbody').on('click','.btn',function(){
     $('#changeModal').modal('show');
     id = $(this).parent().data('id');
