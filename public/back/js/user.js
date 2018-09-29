@@ -4,6 +4,8 @@
 $(function(){
   var currentPage = 1;
   var pageSize = 5;
+  var id = 0;
+  var isDelete = 0;
   function render(){
     $.ajax({
       url:'/user/queryUser',
@@ -29,33 +31,20 @@ $(function(){
   }
   render();
 
-  $('tbody').on('click','.btns-forbit',function(){
-    var id = $(this).parent().data('id');
-    $.ajax({
-      url:'/user/updateUser',
-      type:'post',
-      dataType:'json',
-      data:{
-        id:id,
-        isDelete:0
-      },
-      success:function(info){
-        if (info.success) {
-          render();
-        }
-      }
-    })
+  $('tbody').on('click','.btn',function(){
+    $('#changeModal').modal('show');
+    id = $(this).parent().data('id');
+    isDelete = $(this).hasClass('btn-default')? 0 :1;
   })
-
-  $('tbody').on('click','.btns-using',function(){
-    var id = $(this).parent().data('id');
+  $('.change_confirm').on('click',function(){
+    $('#changeModal').modal('hide');
     $.ajax({
       url:'/user/updateUser',
       type:'post',
       dataType:'json',
       data:{
         id:id,
-        isDelete:1
+        isDelete:isDelete
       },
       success:function(info){
         if (info.success) {
