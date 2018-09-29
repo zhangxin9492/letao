@@ -123,3 +123,16 @@ html,body {
 .lt_main .breadcrumb {
   margin-top: 20px;
 }
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+/*表格*/
+.table>thead>tr>th {
+  text-align: center;
+  vertical-align: middle;
+}
+.table>tbody>tr>td {
+  vertical-align: middle;
+  text-align: center;
+}
