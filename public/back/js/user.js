@@ -49,6 +49,7 @@ $(function(){
         isDelete:isDelete
       },
       success:function(info){
+        console.log(info);
         if (info.success) {
           render();
         }
