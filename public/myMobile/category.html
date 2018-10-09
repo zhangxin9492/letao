@@ -17,16 +17,33 @@
     <h3>乐淘云购</h3>
     <a href="search.html"><i class="fa fa-search"></i></a>
   </div>
+  <div class="lt_main">
+    <div class="lt_main_left">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lt_main_right">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+  </div>
   <div class="lt_footer">
     <ul>
       <li>
-        <a href="#" class="current">
+        <a href="index.html">
           <i class="fa fa-home"></i>
           <p>首页</p>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" class="current">
           <i class="fa fa-bars"></i>
           <p>分类页</p>
         </a>
@@ -46,7 +63,29 @@
     </ul>
   </div>
 </div>
+<script type="text/template" id="category_tmp">
+  {{each rows v i}}
+  {{if i == 0}}
+  <li class="current"><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
+  {{else}}
+  <li data-id="{{v.id}}"><a href="#">{{v.categoryName}}</a></li>
+  {{/if}}
+  {{/each}}
+</script>
+<script type="text/template" id="category02_tmp">
+  {{each rows v i}}
+  <li>
+    <a href="#">
+      <img src="{{v.brandLogo}}" alt="">
+      <p>{{v.brandName}}</p>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/category.js"></script>
 </body>
 </html>
