@@ -18,6 +18,7 @@ html,body {
   margin:0 auto;
   position: relative;
   padding: 45px 0 50px 0;
+  background-color: #fff;
 }
 .lt_header {
   width: 100%;
@@ -80,4 +81,39 @@ html,body {
 .lt_footer li a p {
   color: #fff;
   margin: 0;
+}
+
+/*产品区域*/
+.lt_product {
+  padding: 10px;
+}
+.lt_product li {
+  width: 48%;
+  float: left;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.lt_product li:nth-child(2n+1) {
+  margin-right: 20px;
+}
+.lt_product li a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+.lt_product li a img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+.lt_product li a p:nth-child(2) {
+  text-align: left;
+}
+.lt_product li p .price {
+  color: red;
+  margin-right: 5px;
+}
+.lt_product li p .oldPrice {
+  text-decoration: line-through;
 }

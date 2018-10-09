@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.lt_main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.lt_main .search{
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+.lt_main .search input {
+  height: 34px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding-right: 56px;
+  border: 1px solid #007AFF;
+  margin: 0;
+}
+.lt_main .search button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0 5px 5px 0;
+}
+.lt_main .sort {
+  width: 100%;
+  height: 30px;
+  background-color: #ccc;
+}
+.lt_main .sort a {
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
