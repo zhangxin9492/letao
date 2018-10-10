@@ -31,7 +31,7 @@ $(function(){
     localStorage.setItem('productList',str);
     render();
     $('.lt_main .search input').val('');
-    location.href='searchList.html';
+    location.href='searchList.html?key='+ val;
   })
 
 //  删除一项纪录

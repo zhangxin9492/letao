@@ -105,19 +105,50 @@
         <h4 class="modal-title" id="addmyModalLabel">添加商品</h4>
       </div>
       <div class="modal-body">
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-            Dropdown
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
+        <form action="" id="form">
+          <div class="form-group">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                <span class="text">请添加二级分类</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu secondCategory">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+            <input type="hidden" class="hidden01" name="brandId">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入商品名称" name="proName">
+          </div>
+          <div class="form-group">
+            <textarea name="proDesc" class="form-control" placeholder="请输入商品描述" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="num" placeholder="请输入商品库存">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="请输入商品尺码" name="size" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="oldPrice" placeholder="请输入商品原价">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="price" placeholder="请输入商品现价">
+          </div>
+          <div class="form-group">
+            <!--将label和input关联起来需要将label的for属性的值和input的id值设置为相同-->
+            <label for="fileload" class="btn btn-default">上传图片</label>
+            <input type="file" id="fileload" style="display: none">
+          </div>
+          <div class="form-group">
+
+          </div>
+        </form>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -149,6 +180,11 @@
   {{/each}}
 </script>
 <!--填充下拉菜单-->
+<script type="text/template" id="select_tmp">
+  {{each rows v i}}
+    <li><a href="#" data-id="{{v.id}}">{{ v.brandName }}</a></li>
+  {{/each}}
+</script>
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>

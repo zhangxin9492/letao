@@ -14,7 +14,6 @@ $(function(){
         pageSize:pageSize
       },
       success:function(info){
-        console.log(info);
         var str = template('tmp',info);
         $('tbody').html(str);
         $("#pagintor").bootstrapPaginator({
@@ -37,5 +36,25 @@ $(function(){
   $('.add-goods').on('click',function(){
     $('#addmyModal').modal('show');
   })
-
+//填充下拉框
+  $.ajax({
+    url:'/category/querySecondCategoryPaging',
+    type:'get',
+    data:{
+      page:1,
+      pageSize:100
+    },
+    dataType:'json',
+    success:function(info){
+      console.log(info);
+      var str = template('select_tmp',info);
+      $('.secondCategory').html(str);
+    }
+  })
 })
+//点击下拉框,获取文本
+  $('.secondCategory').on('click','a',function(){
+    var id = $(this).data('id');
+    $('input[name="brandId"]').val(id);
+    $('#dropdownMenu1 .text').text($(this).text());
+  })
