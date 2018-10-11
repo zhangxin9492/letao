@@ -20,5 +20,6 @@ function getUrl(key){
   })
   return obj[key];
 }
-//初始化轮播图
+
+
 
