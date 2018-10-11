@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-  <script src="./lib/nprogress/nprogress.css"></script>
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
@@ -104,8 +105,8 @@
         <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
         <h4 class="modal-title" id="addmyModalLabel">添加商品</h4>
       </div>
+      <form id="form">
       <div class="modal-body">
-        <form action="" id="form">
           <div class="form-group">
             <div class="dropdown">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
@@ -120,6 +121,7 @@
               </ul>
             </div>
             <input type="hidden" class="hidden01" name="brandId">
+            <input type="hidden" name="statu">
           </div>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="请输入商品名称" name="proName">
@@ -140,20 +142,24 @@
             <input type="text" class="form-control" name="price" placeholder="请输入商品现价">
           </div>
           <div class="form-group">
-            <!--将label和input关联起来需要将label的for属性的值和input的id值设置为相同-->
-            <label for="fileload" class="btn btn-default">上传图片</label>
-            <input type="file" id="fileload" style="display: none">
-          </div>
-          <div class="form-group">
+        <label for="fileupload" class="btn btn-default">上传图片</label>
+        <!-- 指定 name 用于后台将来接收文件
+             指定 data-url 用于指定后台文件上传的地址
+             multiple 设置用于让用户可以选择多张文件
+        -->
+        <input style="display: none;" type="file" id="fileupload" name="pic1" data-url="/product/addProductPic" multiple>
+      </div>
 
+          <div class="form-group" id="imgBox">
+            <input type="hidden" name="picStatus">
           </div>
-        </form>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="btn btn-primary logout_confirm">退出</button>
+        <button type="submit" class="btn btn-primary add_product">添加</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -186,10 +192,13 @@
   {{/each}}
 </script>
 <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/goods.js"></script>
 </body>
